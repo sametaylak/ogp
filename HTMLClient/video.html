@@ -5,10 +5,16 @@
 
   <!-- If you'd like to support IE8 -->
   <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
+  <style type="text/css">
+  	#my-video{
+  		height: 100%;
+  		position: absolute;
+  	}
+  </style>
 </head>
 
 <body style="padding:0; margin:0">
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  <video id="my-video" class="video-js" controls preload="auto" 
   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
     <source src="http://techslides.com/demos/sample-videos/small.mp4" type='video/mp4'>
     <p class="vjs-no-js">
