@@ -1,41 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
 
-<title>Video/Audio</title>
-
-<link rel='stylesheet' type='text/css' href='style.css' />
-<style type="text/css">
-
-</style>
-
-<script src='jquery.js'></script>
-
-<script src='javascript.js'></script>
-
-<script type='text/javascript'>
-
-$(document).ready(function() {
-	$('video').videoPlayer({
-		'playerWidth' : 0.95,
-		'videoClass' : 'video'	
-	});
-});
-
-</script>
-
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
 </head>
+
 <body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="http://techslides.com/demos/sample-videos/small.mp4" type='video/mp4'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
 
-<div id="travel">
-	<a class="sub-head" href="http://www.inserthtml.com/2013/03/custom-html5-video-player/">&laquo; BACK TO ARTICLE</a>
-</div>
-
-<div class="container">
-	<video width="700" height="400">
-		<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
-	</video>
-</div>
-
+  <script src="http://vjs.zencdn.net/5.4.6/video.js"></script>
 </body>
 </html>
