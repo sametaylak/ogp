@@ -1,11 +1,11 @@
-// app.js
+
 var express = require('express');  
-var app = express();  
-var server = require('http').createServer(app);  
+var app = express();
+var server = require('http').createServer(handler)
 var io = require('socket.io')(server);
 
-app.get('/', function(req, res,next) {  
-    res.sendFile(__dirname + '/index.html');
-});
+server.listen(80);
 
-server.listen(80);  
+io.on('connection', function (socket) {
+  socket.emit('news', "hey");
+}); 
