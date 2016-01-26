@@ -1,7 +1,9 @@
-var io = require("socket.io").listen(8100, function() {
-	console.log("server running");
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+io.on('connection', function(socket){
+  console.log('a user connected');
 });
-
-io.sockets.on("connection",function(socket){
-    console.log("Server-Client Connected!");
+http.listen(3000, function(){
+  console.log('listening on *:3000');
 });
