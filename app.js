@@ -4,7 +4,9 @@ var app = express();
 var server = require('http').createServer(handler)
 var io = require('socket.io')(server);
 
-server.listen(80);
+server.listen(80, function() {
+	console.log("sunucu çalışıyor");
+});
 
 io.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
