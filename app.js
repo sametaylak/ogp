@@ -6,6 +6,6 @@ io.on('connection', function(socket) {
 	console.log("one user connected");
 })
 
-http.listen(80, function() {
-	console.log("server is running... on port 3000");
+http.listen(1100, function() {
+	console.log("server is running... on port 1100");
 })
